@@ -1,15 +1,17 @@
 * {
   box-sizing: border-box;
+}
+
+body {
   margin: 0%;
   font-family: 'Poppins', sans-serif;
-
 }
 
 header {
   color: white;
   text-align: center;
   background-color: rgb(75, 103, 163);
-  padding: 30px;
+  padding: 10px;
 }
 
 #current-temp {
@@ -18,18 +20,42 @@ header {
 
 main {
   display: flex;
+  flex-wrap: wrap;
+  
 }
 
 aside {
   flex: 1;
   padding: 20px;
-  
-  
+    
 }
 
 section {
   flex: 4;
   padding: 20px;
+  
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+  
+  
+}
+
+.recent {
+  width: 100%;
+  padding: 7px;
+  color: rgb(55, 54, 54);
+  background-color: rgb(160, 161, 161);
+  border-radius: 5%;
+  border: 1px solid;
+  margin-top: 5%; 
+  font-size: medium;
+  
+ 
 }
 
 #current-temp {
@@ -43,10 +69,53 @@ section {
   padding: 7px;
   margin-top: 5%;
   border-radius: 5%;
-  border: 1px solid  
+  border: 1px solid;  
+  margin-bottom: 10%;
+  font-size: medium;
 }
 
 #city {
   width: 100%;
   padding: 7px;
+}
+
+#location {
+  border-bottom: 4px solid rgb(90, 89, 89);
+}
+
+.forcast {
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.days {
+  border: 1px solid black;
+  color: white;
+  background-color: rgb(75, 103, 163);
+  padding: 10px; 
+}
+
+button:active {
+  
+    box-shadow: 0 1px #666;
+    transform: translateY(2px);
+  
+}
+
+button {
+  cursor: pointer;
+}
+
+.recent:hover {
+  background-color: rgb(203, 255, 255);
+  transition: 1s;
+  
+
+}
+
+#search:hover {
+  background-color: rgb(147, 191, 248);
+  color: black;
+  transition: 1s;
 }
