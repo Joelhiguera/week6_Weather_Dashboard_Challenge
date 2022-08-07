@@ -87,6 +87,7 @@ ul {
   justify-content: space-between;
   display: flex;
   flex-wrap: wrap;
+ 
 }
 
 .days {
@@ -94,12 +95,16 @@ ul {
   color: white;
   background-color: rgb(75, 103, 163);
   padding: 10px; 
+  
+  
+
 }
 
 button:active {
   
     box-shadow: 0 1px #666;
     transform: translateY(2px);
+    transition: 0s;
   
 }
 
@@ -109,7 +114,7 @@ button {
 
 .recent:hover {
   background-color: rgb(203, 255, 255);
-  transition: 1s;
+  transition: background-color .5s;
   
 
 }
@@ -117,5 +122,5 @@ button {
 #search:hover {
   background-color: rgb(147, 191, 248);
   color: black;
-  transition: 1s;
+  transition: background-color, color .5s;
 }
