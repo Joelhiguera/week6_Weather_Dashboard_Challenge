@@ -1,15 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  
   <title>Weather Channel</title>
 </head>
 
 <body>
 
-  <nav>Weather Dashboard</nav>
+  <header>
+    <h1>Weather Dashboard</h1>
+  </header>
+
+  <main>
+    
+    <aside>
+      <h1>Search for a City:</h1>
+      <input type="text" name="search" id="city" placeholder="San Diego">
+      <br>
+      <button id="search" type="submit">Search</button>
+
+
+    </aside>
+
+    <section>
+
+      <div id="current-temp">
+        <h1>City (date)</h1>
+        <p>Temp: "current Temp</p>
+        <p>Wind: "current Wind"</p>
+        <p>Humidity: "current Humidity"</p>
+        <p>UV Index: "Current UV index"</p>
+      </div>
+
+      <div id="forcast">
+        <h1>5-Day Forcast</h1>
+      </div>
+
+    </section>
+
+  </main>
 
 
 
