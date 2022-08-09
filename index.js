@@ -20,13 +20,30 @@ function getWeather() {
       return response.json()
     }).then(function (data) {
       const cityDisplay = document.getElementById('cityDisplay')
-      // const humidity = document.getElementById('humidity')
-      // const wind = document.getElementById('wind')
-      // const temp = document.getElementById('temp')
-      // temp.textContent = data.current.temp
-      // wind.textContent = data.current.wind_speed
-      // humidity.textContent = data.current.humidity
-      cityDisplay.textContent = city;
+      let temp = document.getElementById('temp');
+      let wind = document.getElementById('wind');
+      let humidity = document.getElementById('humidity');
+      let uv = document.getElementById('uv');
+
+      if (data.cod = data.message){
+        cityDisplay.textContent = data.message
+        temp.textContent = null
+        wind.textContent = null
+        humidity.textContent = null
+        uv.textContent = null
+
+        
+      }else{
+        cityDisplay.textContent = data.name
+        temp.textContent = "Temp: " + data.main.temp + " °F"
+        wind.textContent = "Wind Speed: " + data.wind.speed + " mph"
+        humidity.textContent = "Humidity: " + data.main.humidity + " %"
+        uv.textContent = data.weather.icon
+
+      } 
+
+
+
       console.log(data)
       console.log(cityValue)
       
