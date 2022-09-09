@@ -3,7 +3,7 @@ const newSearch = document.getElementById('newSearch')
 const apiKey = '00b8f1f0d82b629d0fa8d63e80a96aff'
 
 
-
+// Handles current weather display and fetch request 
 function currentWeather() {
   let cityValue = document.getElementById('city').value;
   let city = cityValue;
@@ -25,12 +25,14 @@ function currentWeather() {
       const { temp, humidity } = data.main;
       const { speed } = data.wind;
 
-      if (data.cod = data.message){
-        cityDisplay.textContent = name
+      if (data.cod == 404){
+        cityDisplay.textContent = "City Not Found"
         tempEl.textContent = null
         windEl.textContent = null
         humidityEl.textContent = null
         uvEl.textContent = null
+        countryEl.textContent = null
+        console.log('city not found')
         
       }else{
         cityDisplay.textContent = name + ", " + country
@@ -40,6 +42,7 @@ function currentWeather() {
         
       } 
       console.log(data)
+      console.log(data.message)
       
       
     })
@@ -66,7 +69,6 @@ function fiveDayForcast() {
      daysDiv.classList.add('days')
 
      const { dt_txt } = data.list[i]
-     console.log(dt_txt)
      const { icon } = data.list[i].weather[0]
      const { temp } = data.list[i].main
      const { speed } = data.list[i].wind
@@ -80,7 +82,9 @@ function fiveDayForcast() {
 
 
 
-
+      
+    //  forecastContainer.textContent('')
+      
     forecastContainer.appendChild(daysDiv);
     daysDiv.appendChild(forecastDate);
     daysDiv.appendChild(forecastImg);
@@ -88,11 +92,24 @@ function fiveDayForcast() {
     daysDiv.appendChild(forecastWind);
     daysDiv.appendChild(forecastHumidity);
 
+    
+
+    
+
+    
+
+
+
+
+
+
     }
   })
 }
 
 function recentSearch() {
+
+
   const cityValue = document.getElementById('city').value;
   const city = cityValue;
   const recentContainer = document.getElementById('recent-search')
@@ -108,13 +125,15 @@ function recentSearch() {
   
   recentContainer.appendChild(recentLi)
   recentLi.appendChild(recentBtn)
-  console.log(recentContainer)
+
 
   
 
 }
 
 
+
+//calling all functions
 searchBtn.addEventListener('click', currentWeather);
 searchBtn.addEventListener('click', fiveDayForcast);
 searchBtn.addEventListener('click', recentSearch);
