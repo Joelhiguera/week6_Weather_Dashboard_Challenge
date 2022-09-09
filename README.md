@@ -11,6 +11,10 @@ I understand there a problems with this app however I am running out of time in 
 
 ## LINK
 
+GitHub deployment: https://joelhiguera.github.io/week6_Weather_Dashboard_Challenge/
+
+GitHub Repo: https://github.com/Joelhiguera/week6_Weather_Dashboard_Challenge
+
 ## SCREEN SHOTS 
 ![Alt text](Capture1.PNG)
 ![Alt text](Capture2.PNG)
