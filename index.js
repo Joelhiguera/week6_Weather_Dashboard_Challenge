@@ -83,7 +83,7 @@ function fiveDayForcast() {
 
 
       
-    //  forecastContainer.textContent('')
+   
       
     forecastContainer.appendChild(daysDiv);
     daysDiv.appendChild(forecastDate);
