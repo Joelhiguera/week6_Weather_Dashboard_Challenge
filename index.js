@@ -124,6 +124,7 @@ function recentSearch() {
 
 
 
+
 //calling all functions
 searchBtn.addEventListener('click', currentWeather);
 searchBtn.addEventListener('click', fiveDayForcast);
