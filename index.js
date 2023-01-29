@@ -94,15 +94,6 @@ function fiveDayForcast() {
 
     
 
-    
-
-    
-
-
-
-
-
-
     }
   })
 }
